@@ -30,4 +30,6 @@ extension ImageDownloaderType {
     }
 }
 
-public class DefaultImageDownloader: ImageDownloaderType {}
+public class DefaultImageDownloader: ImageDownloaderType {
+    public init() {}
+}
