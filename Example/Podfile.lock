@@ -1,0 +1,22 @@
+PODS:
+  - Kingfisher (3.11.0)
+  - KingfisherExtension (1.0.1):
+    - Kingfisher
+  - WebImage (0.1.0):
+    - KingfisherExtension (~> 1.0.1)
+
+DEPENDENCIES:
+  - WebImage (from `../`)
+
+EXTERNAL SOURCES:
+  WebImage:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Kingfisher: c8911a7672c6217dec8c0520fb6e76ec4b7e0780
+  KingfisherExtension: bfb21c0cd08c62fd0c92e5d10c7d098b597fc45b
+  WebImage: aacf27fa1a28d27e270b896e3750f62ad9688efa
+
+PODFILE CHECKSUM: b8e66050054f85b28f1391023f2399699c6d416a
+
+COCOAPODS: 1.3.0.rc.1
