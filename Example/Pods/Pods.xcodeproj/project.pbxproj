@@ -14,7 +14,7 @@
 		1B1AC5151F4D7C9A00A85851 /* UIImageView+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AC5111F4D7C9100A85851 /* UIImageView+WebImage.swift */; };
 		1B1AC5241F4D8AA600A85851 /* ImageDownloaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AC5201F4D8AA300A85851 /* ImageDownloaderType.swift */; };
 		1B1AC5251F4D8AA600A85851 /* UIButton+WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AC5211F4D8AA300A85851 /* UIButton+WebImage.swift */; };
-		1B78277A1F4EE20700AD1C89 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7827791F4EE20700AD1C89 /* ImageCacheType.swift */; };
+		1B78277B1F4EE26D00AD1C89 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7827791F4EE20700AD1C89 /* ImageCacheType.swift */; };
 		1F9D95C57864416D56FADC88A5A50457 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98C9CA30C2FB2F5BABCF454EE722C2 /* ImageDownloader.swift */; };
 		23B956A659AF2E76734D07458429F29F /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E50305860A01899D43B49BC86E0F41 /* ThreadHelper.swift */; };
 		2A256604A39C74C9C9954DAB2041878D /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161FCB6F9E22DED375C52FA80C05BD27 /* String+MD5.swift */; };
@@ -616,7 +616,6 @@
 				9C1BB53BA70217F566B36537A3A63880 /* AnimatedImageView.swift in Sources */,
 				3F2A2A1940FBE921847ED80C8781F1C2 /* Box.swift in Sources */,
 				D7F44E70FBF99B6917AFB2218064DCF3 /* CacheSerializer.swift in Sources */,
-				1B78277A1F4EE20700AD1C89 /* ImageCacheType.swift in Sources */,
 				934A36D6B847A9B437846EB47FD3C9C4 /* Filter.swift in Sources */,
 				BDDA79DF79ECE8FAA434BC2D6D31A7C1 /* FormatIndicatedCacheSerializer.swift in Sources */,
 				36F504803AC5AE737F3A7F227A2883BE /* Image.swift in Sources */,
@@ -645,6 +644,7 @@
 			files = (
 				1B1AC5241F4D8AA600A85851 /* ImageDownloaderType.swift in Sources */,
 				1B1AC5151F4D7C9A00A85851 /* UIImageView+WebImage.swift in Sources */,
+				1B78277B1F4EE26D00AD1C89 /* ImageCacheType.swift in Sources */,
 				1B1AC5141F4D7C9A00A85851 /* Namespacing.swift in Sources */,
 				EE314207DEC75297E1B459B03C25E6A6 /* WebImage-dummy.m in Sources */,
 				1B1AC5251F4D8AA600A85851 /* UIButton+WebImage.swift in Sources */,
