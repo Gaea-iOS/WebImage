@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
 //        let url = URL(string: "http://ouo6mncln.bkt.clouddn.com/3DFCB247-7233-4F5B-9C25-8AFAFA976B3F.webp")
 
-//        downloader.donwloadImage(with: URL(string: key)!)
+        DefaultImageDownloader.shared.donwloadImage(with: URL(string: key)!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickButton(sender: Any) {
-//        imageView.image = self.cacher.retrieveImage(forKey: key)
+        imageView.image = DefaultImageCache.shared.retrieveImage(forKey: key)
     }
 }
 
