@@ -11,30 +11,32 @@ import WebImage
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var an: UIImageView!
+    
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var button: UIButton!
+    
+    let key = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503397296336&di=8febd8f2960b049cbbe81cc09dee8b0a&imgtype=0&src=http%3A%2F%2Fimg1.sc115.com%2Fuploads%2Fsc%2Fjpg%2F144%2F18479.jpg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        button.addTarget(self, action: #selector(clickButton(sender:)), for: .touchUpInside)
         
+//        an.web.setImage(withURLString: key)
         
-        let url = URL(string: "http://ouo6mncln.bkt.clouddn.com/3DFCB247-7233-4F5B-9C25-8AFAFA976B3F.webp")
-        //
-        //        downloader.dowload(with: url, progress: { (p1, p2) in
-        //            print("p1 = \(p1), p2 = \(p2)")
-        //        }, success: { (image, url) in
-        //            print("success: url = \(url)")
-        //        }) { (error) in
-        //            print("error: \(error)")
-        //        }
-        
-        imageView.backgroundColor = .red
+//        let url = URL(string: "http://ouo6mncln.bkt.clouddn.com/3DFCB247-7233-4F5B-9C25-8AFAFA976B3F.webp")
+
+//        downloader.donwloadImage(with: URL(string: key)!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func clickButton(sender: Any) {
+//        imageView.image = self.cacher.retrieveImage(forKey: key)
+    }
 }
 

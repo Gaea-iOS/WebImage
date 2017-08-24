@@ -34,5 +34,6 @@ extension ImageCacheType {
 }
 
 public class DefaultImageCache: ImageCacheType {
-    public init() {}
+    public static let shared = DefaultImageCache()
+    private init() {}
 }
