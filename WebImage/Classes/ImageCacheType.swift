@@ -13,6 +13,9 @@ public protocol ImageCacheType {
     func store(_ image: UIImage, forKey key: String)
     func retrieveImage(forKey key: String) -> UIImage?
     func removeImage(forKey key: String)
+    
+    func clearCache(completed: (() -> Void)?)
+    func isImageCached(forKey key: String) -> Bool
 }
 
 extension ImageCacheType {
@@ -30,6 +33,15 @@ extension ImageCacheType {
 
     public func removeImage(forKey key: String) {
         ImageCache.default.removeImage(forKey: key)
+    }
+    
+    public func clearCache(completed: (() -> Void)? = nil) {
+        ImageCache.default.clearMemoryCache()
+        ImageCache.default.clearDiskCache(completion: completed)
+    }
+    
+    public func isImageCached(forKey key: String) -> Bool {
+        return ImageCache.default.isImageCached(forKey: key).cached
     }
 }
 
