@@ -41,7 +41,7 @@ extension ImageCacheType {
     }
     
     public func isImageCached(forKey key: String) -> Bool {
-        return ImageCache.default.isImageCached(forKey: key).cached
+        return ImageCache.default.imageCachedType(forKey: key).cached
     }
 }
 
