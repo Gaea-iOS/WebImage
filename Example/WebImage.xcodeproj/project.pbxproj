@@ -171,7 +171,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				BE5AADBCD1824FDC2410F71C /* [CP] Embed Pods Frameworks */,
-				2436DC05693607ED8FCDCF6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,8 +189,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				D767D8F553FAD7100AFC10CC /* [CP] Embed Pods Frameworks */,
-				67CAEC938D5FD6CFC1E34B02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = D48A2C9JPT;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = D48A2C9JPT;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -229,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -282,43 +282,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2436DC05693607ED8FCDCF6E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67CAEC938D5FD6CFC1E34B02 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebImage_Tests/Pods-WebImage_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BE5AADBCD1824FDC2410F71C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/WebImage/WebImage.framework",
 			);
@@ -329,22 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D767D8F553FAD7100AFC10CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebImage_Tests/Pods-WebImage_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebImage_Example/Pods-WebImage_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECB6FD295EFED608F466052E /* [CP] Check Pods Manifest.lock */ = {
@@ -519,6 +474,7 @@
 			baseConfigurationReference = A64BB061A202C75E180E2639 /* Pods-WebImage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D48A2C9JPT;
 				INFOPLIST_FILE = WebImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -534,6 +490,7 @@
 			baseConfigurationReference = B8679C274BA38FD3E6212C1A /* Pods-WebImage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D48A2C9JPT;
 				INFOPLIST_FILE = WebImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -548,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BF5A2CA9ACD513E723395B0 /* Pods-WebImage_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = D48A2C9JPT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -569,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D94CE0D275DEDB365A6C14F0 /* Pods-WebImage_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = D48A2C9JPT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
