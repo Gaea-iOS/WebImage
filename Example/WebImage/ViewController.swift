@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickButton(sender: Any) {
-        imageView.image = DefaultImageCache.shared.retrieveImage(forKey: key)
+//        imageView.image = DefaultImageCache.shared.retrieveImage(forKey: key, completed: <#(UIImage?) -> Void#>)
     }
 }
 

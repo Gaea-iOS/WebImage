@@ -10,11 +10,11 @@ import Kingfisher
 
 public extension WebImage where Base: UIImageView {
     
-    public func setImage(withURLString urlString: String?,
+    func setImage(withURLString urlString: String?,
                          placeholder: UIImage? = nil,
                          progress: ((_ receivedSize: Int64, _ totalSize: Int64) -> Void)? = nil,
                          success: ((UIImage) -> Void)? = nil,
-                         failure: ((NSError) -> Void)? = nil){
+                         failure: ((Error) -> Void)? = nil){
     
         let url: URL? = {
             guard let urlString = urlString else {
@@ -26,16 +26,18 @@ public extension WebImage where Base: UIImageView {
         setImage(with: url, placeholder: placeholder, progress: progress, success: success, failure: failure)
     }
     
-    public func setImage(with url: URL?,
+    func setImage(with url: URL?,
                   placeholder: UIImage? = nil,
                   progress: ((_ receivedSize: Int64, _ totalSize: Int64) -> Void)? = nil,
                   success: ((UIImage) -> Void)? = nil,
-                  failure: ((NSError) -> Void)? = nil) {
-        base.kf.setImage(with: url, placeholder: placeholder, progressBlock: progress) { (image, error, _, _) in
-            if let image = image {
-                success?(image)
-            } else {
-                failure?(error!)
+                  failure: ((Error) -> Void)? = nil) {
+
+        base.kf.setImage(with: url, placeholder: placeholder, progressBlock: progress) {
+            switch $0 {
+            case let .success(value):
+                success?(value.image)
+            case let .failure(error):
+                failure?(error)
             }
         }
     }

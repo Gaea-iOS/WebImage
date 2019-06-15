@@ -4,10 +4,4 @@ platform :ios, '10.0'
 
 target 'WebImage_Example' do
   pod 'WebImage', :path => '../'
-
-  target 'WebImage_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

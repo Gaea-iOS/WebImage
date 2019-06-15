@@ -1,6 +1,6 @@
 PODS:
   - Kingfisher (5.6.0)
-  - WebImage (0.5.0):
+  - WebImage (0.5.2):
     - Kingfisher (~> 5.0)
 
 DEPENDENCIES:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
-  WebImage: c6b0ec27682e790956127fb87da1847d2e69aec2
+  WebImage: 624dea48b3ed26900c26ac5ab5ebd09dc56c9c1e
 
-PODFILE CHECKSUM: dc45ed86946b5673831846ddfc349883f21e58b5
+PODFILE CHECKSUM: 20e9e064c9a1ae9496bf4a8fe2ae4fad50458ba8
 
 COCOAPODS: 1.7.2

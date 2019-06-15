@@ -21,7 +21,7 @@ public protocol WebImageCompatible {
 }
 
 public extension WebImageCompatible {
-    public var web: WebImage<Self> {
+    var web: WebImage<Self> {
         get { return WebImage(self) }
     }
 }

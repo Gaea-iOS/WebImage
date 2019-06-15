@@ -11,7 +11,7 @@ import Kingfisher
 public protocol ImageCacheType {
     
     func store(_ image: UIImage, forKey key: String)
-    func retrieveImage(forKey key: String) -> UIImage?
+    func retrieveImage(forKey key: String, completed: @escaping (UIImage?) -> Void)
     func removeImage(forKey key: String)
     
     func clearCache(completed: (() -> Void)?)
@@ -24,11 +24,15 @@ extension ImageCacheType {
         ImageCache.default.store(image, forKey: key)
     }
 
-    public func retrieveImage(forKey key: String) -> UIImage? {
-        if let image = ImageCache.default.retrieveImageInMemoryCache(forKey: key) {
-            return image
-        }
-        return ImageCache.default.retrieveImageInDiskCache(forKey: key)
+    public func retrieveImage(forKey key: String, completed: @escaping (UIImage?) -> Void) {
+        return ImageCache.default.retrieveImageInDiskCache(forKey: key, completionHandler: {
+            switch $0 {
+            case let .success(value):
+                completed(value)
+            case .failure:
+                completed(nil)
+            }
+        })
     }
 
     public func removeImage(forKey key: String) {
